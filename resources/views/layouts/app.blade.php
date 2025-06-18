@@ -56,7 +56,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('home') }}">ホーム</a>
-                                    <a class="dropdown-item" href="{{ route('home') }}">タスク一覧</a>
+                                    <a class="dropdown-item" href="{{ route('show_task_list') }}">タスク一覧</a>
                                     <a class="dropdown-item" href="{{ route('show_task_register') }}">タスク登録</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
