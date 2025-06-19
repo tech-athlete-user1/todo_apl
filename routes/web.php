@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\TaskRegisterController;
 use App\Http\Controllers\TaskListController;
+use App\Http\Controllers\TaskEditController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -21,3 +22,9 @@ Route::post('/task/register', [TaskRegisterController::class, 'register'])->name
 
 // タスク一覧画面  表示処理
 Route::get('/task/list', [TaskListController::class, 'index'])->name('show_task_list');
+
+// タスク編集画面  表示処理
+Route::get('/task/edit/{task_id}', [TaskEditController::class, 'index'])->name('show_task_edit');
+
+// タスク編集画面  更新処理
+Route::post('/task/edit/{task_id}', [TaskEditController::class, 'edit'])->name('task_edit');
