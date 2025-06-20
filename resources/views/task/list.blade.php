@@ -33,9 +33,19 @@
                             <td>{{ optional($task->deadline)->format('Y-m-d') }}</td>
                             <td>@if($task->finish_flg == 1 )  完了  @else 未完了 @endif</td>
                             <td>{{ optional($task->finish_date)->format('Y-m-d') }}</td>
-                            <td>完了</td>
+                            <td>
+                                <form action="{{ route('task_finish' , ['task_id' => $task->id]) }}" method="post" >
+                                    @csrf
+                                    <button class="btn btn-success">完了</button>
+                                </form>
+                            </td>
                             <td><a href="{{ route('show_task_edit' , ['task_id' => $task->id]) }}" class="btn btn-primary">編集</a></td>
-                            <td>削除</td>
+                            <td>
+                                <form action="{{ route('task_delete' , ['task_id' => $task->id]) }}" method="post" >
+                                    @csrf
+                                    <button class="btn btn-danger">削除</button>
+                                </form>
+                            </td>
                         </tr>
                         @endforeach
                     @endif

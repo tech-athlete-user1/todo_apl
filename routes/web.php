@@ -23,6 +23,12 @@ Route::post('/task/register', [TaskRegisterController::class, 'register'])->name
 // タスク一覧画面  表示処理
 Route::get('/task/list', [TaskListController::class, 'index'])->name('show_task_list');
 
+// タスク一覧画面  タスク完了処理
+Route::post('/task/finish/{task_id}', [TaskListController::class, 'finish'])->name('task_finish');
+
+// タスク一覧画面  タスク削除処理
+Route::post('/task/delete/{task_id}', [TaskListController::class, 'delete'])->name('task_delete');
+
 // タスク編集画面  表示処理
 Route::get('/task/edit/{task_id}', [TaskEditController::class, 'index'])->name('show_task_edit');
 
