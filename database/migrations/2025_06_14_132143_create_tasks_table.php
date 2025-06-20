@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('user_id');                    // ユーザーID（外部キー）
             $table->string('title',100);                   // タスク名
             $table->string('detail', 250)->nullable();     // 詳細
-            $table->timestamp('deadline');                 // 締切日
+            $table->timestamp('deadline')->nullable();     // 締切日
             $table->integer('finish_flg')->default(0);     // 完了フラグ(0:未完了 | 1:完了)
             $table->timestamp('finish_date')->nullable();  // 完了日
             $table->timestamps();                          // created_at・updated_at
