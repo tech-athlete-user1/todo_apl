@@ -52,7 +52,7 @@
                             value="{{ optional($task->finish_date)->format('Y-m-d') }}">
                         </div>
                         <div class="mb-3 text-center">
-                            <button type="submit" class="btn btn-primary px-4">編集する</button>
+                            <button type="submit" class="btn btn-primary px-4 custom-btn">編集する</button>
                         </div>
                     </form>
                 </div>

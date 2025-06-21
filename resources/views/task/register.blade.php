@@ -35,7 +35,7 @@
                             <input type="date" id="deadline" name="deadline" class="form-control">
                         </div>
                         <div class="mb-3 text-center">
-                            <button type="submit" class="btn btn-primary px-4">登録する</button>
+                            <button type="submit" class="btn btn-primary px-4 custom-btn">登録する</button>
                         </div>
                     </form>
                 </div>

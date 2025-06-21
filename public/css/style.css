@@ -1,0 +1,20 @@
+span{
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+
+.cell-display {
+    max-width: 300px;
+    word-break: break-word;  /* 単語途中でも折り返し */
+    white-space: normal;     /* 折り返し有効化 */
+}
+
+.custom-btn {
+    transition: .3s cubic-bezier(0.5, 1, 0.89, 1);
+}
+.custom-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
