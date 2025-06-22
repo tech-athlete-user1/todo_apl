@@ -9,11 +9,11 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>タスク名</th>
-                        <th>詳細</th>
-                        <th>締切日</th>
+                        <th>{{ config('const.label.task_name') }}</th>
+                        <th>{{ config('const.label.detail') }}</th>
+                        <th>{{ config('const.label.deadline') }}</th>
                         <th>状態</th>
-                        <th>完了日</th>
+                        <th>{{ config('const.label.finish_date') }}</th>
                         <th>完了処理</th>
                         <th>編集処理</th>
                         <th>削除処理</th>
@@ -31,7 +31,7 @@
                             <td class="cell-display">{{ $task->title }}</td>
                             <td class="cell-display">{{ $task->detail }}</td>
                             <td>{{ optional($task->deadline)->format('Y-m-d') }}</td>
-                            <td>@if($task->finish_flg == 1 )  完了  @else 未完了 @endif</td>
+                            <td>{{ config('const.finish_status.' . $task->finish_flg ) }}</td>
                             <td>{{ optional($task->finish_date)->format('Y-m-d') }}</td>
                             <td>
                                 <form action="{{ route('task_finish' , ['task_id' => $task->id]) }}" method="post" >
