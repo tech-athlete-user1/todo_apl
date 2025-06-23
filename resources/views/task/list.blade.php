@@ -4,6 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <h1 class="text-center fw-bold mb-4">タスク一覧画面</h1>
+        <div class="d-flex justify-content-end mb-3">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="hide_finished">
+                <label class="form-check-label" for="hide_finished">完了タスクの非表示</label>
+            </div>
+        </div>
         <div>
             <table class="table table-hover">
                 <thead>
@@ -54,4 +60,8 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('js/task_list.js') }}"></script>
 @endsection

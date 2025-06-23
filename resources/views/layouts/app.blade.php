@@ -80,5 +80,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- 各画面、固有のスクリプトを読み込む -->
+    @yield('scripts')
 </body>
 </html>
